@@ -19,7 +19,7 @@ public class Pickup : MonoBehaviour
     public UnityAction<PlayerCharacterController> onPick;
     public Rigidbody pickupRigidbody { get; private set; }
 
-    public PlayerCharacterController pickingPlayer;
+    private PlayerCharacterController _pickingPlayer;
 
     private bool _canBePickedUp;
 
@@ -50,20 +50,18 @@ public class Pickup : MonoBehaviour
 
         // Handle rotating
         transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime, Space.Self);
-        if (_canBePickedUp)
+        if (_canBePickedUp && Input.GetKeyDown(KeyCode.F))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                onPick.Invoke(pickingPlayer);
-            }
+                onPick.Invoke(_pickingPlayer);
+            
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        pickingPlayer = other.GetComponent<PlayerCharacterController>();
+        _pickingPlayer = other.GetComponent<PlayerCharacterController>();
 
-        if (pickingPlayer != null)
+        if (_pickingPlayer != null)
         {
             if (onPick != null)
             {
@@ -74,9 +72,9 @@ public class Pickup : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        pickingPlayer = other.GetComponent<PlayerCharacterController>();
+        _pickingPlayer = other.GetComponent<PlayerCharacterController>();
 
-        if (pickingPlayer != null)
+        if (_pickingPlayer != null)
         {
             if (onPick != null)
             {

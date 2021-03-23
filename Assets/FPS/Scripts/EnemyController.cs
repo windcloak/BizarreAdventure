@@ -71,6 +71,13 @@ public class EnemyController : MonoBehaviour
     [Tooltip("The chance the object has to drop")]
     [Range(0, 1)]
     public float dropRate = 1f;
+    // duplicate this code if you want an enemy to have more than 2 possible drops
+    [Header("Loot2")]
+    [Tooltip("The object this enemy can drop when dying")]
+    public GameObject lootPrefab2;
+    [Tooltip("The chance the object has to drop")]
+    [Range(0, 1)]
+    public float dropRate2 = 1f;
 
     [Header("Debug Display")]
     [Tooltip("Color of the sphere gizmo representing the path reaching range")]
@@ -357,10 +364,18 @@ public class EnemyController : MonoBehaviour
         // tells the game flow manager to handle the enemy destuction
         m_EnemyManager.UnregisterEnemy(this);
 
+        // if you want multiple drops just duplicate the trydropitem function like so
+        // transform.position + new Vector3(1.5f, 0, 0) ensures the item drops don't stack on top of each other
+
         // loot an object
         if (TryDropItem())
         {
             Instantiate(lootPrefab, transform.position, Quaternion.identity);
+        }
+        // loot an object
+        if (TryDropItem2())
+        {
+            Instantiate(lootPrefab2, transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity);
         }
 
         // this will call the OnDestroy function
@@ -430,6 +445,16 @@ public class EnemyController : MonoBehaviour
             return true;
         else
             return (Random.value <= dropRate);
+    }
+    // duplicate this code if you want an enemy to have more than 2 possible drops
+    public bool TryDropItem2()
+    {
+        if (dropRate2 == 0 || lootPrefab2 == null)
+            return false;
+        else if (dropRate2 == 1)
+            return true;
+        else
+            return (Random.value <= dropRate2);
     }
 
     void FindAndInitializeAllWeapons()

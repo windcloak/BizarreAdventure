@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 
-    #region Singleton
+    #region Le Singletón
     public static Inventory instance;
 
     void Awake()
@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+        Debug.Log("Inventory intance created.");
     }
     #endregion
 
@@ -33,6 +34,7 @@ public class Inventory : MonoBehaviour
             return false; //did not pick up item
         }
         items.Add(item);
+        Debug.Log("Picked up " + item.name);
         if (onItemChangedCallback != null) onItemChangedCallback.Invoke();
         return true; //picked up item
     }

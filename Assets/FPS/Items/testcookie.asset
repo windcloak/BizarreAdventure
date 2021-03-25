@@ -14,4 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: test cookie
   icon: {fileID: 21300000, guid: d34d967b2f30cd34bbff1ed50469e20e, type: 3}
-  isDefaultItem: 0

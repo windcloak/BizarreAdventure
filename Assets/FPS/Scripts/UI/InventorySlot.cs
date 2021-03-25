@@ -5,7 +5,7 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
 
-    Item item;
+    Item item; //current item in the slot
 
     public void AddItem (Item newItem)
     {

@@ -197,6 +197,28 @@ public class PlayerInputHandler : MonoBehaviour
         return 0;
     }
 
+    //OUR STUFF
+
+    public bool GetInteractInput()
+    {
+        if (CanProcessInput())
+        {
+            return Input.GetButtonDown(GameConstants.k_ButtonNameInteract);
+        }
+        return false;
+    }
+
+    public bool GetInventoryInput()
+    {
+        if (CanProcessInput())
+        {
+            return Input.GetButtonDown(GameConstants.k_ButtonNameInventory);
+        }
+        return false;
+    }
+
+    //END OF OUR STUFF
+
     float GetMouseOrStickLookAxis(string mouseInputName, string stickInputName)
     {
         if (CanProcessInput())

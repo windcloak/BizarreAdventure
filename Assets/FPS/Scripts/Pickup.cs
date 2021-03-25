@@ -50,10 +50,12 @@ public class Pickup : MonoBehaviour
 
         // Handle rotating
         transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime, Space.Self);
+
+        //Checking for key press
+        //TODO: FIX THIS SLOPPINESS
         if (_canBePickedUp && Input.GetKeyDown(KeyCode.F))
         {
-                onPick.Invoke(_pickingPlayer);
-            
+            onPick.Invoke(_pickingPlayer);
         }
     }
 
@@ -66,7 +68,6 @@ public class Pickup : MonoBehaviour
             if (onPick != null)
             {
                 _canBePickedUp = true;
-                //onPick.Invoke(pickingPlayer);
             }
         }
     }
@@ -79,7 +80,6 @@ public class Pickup : MonoBehaviour
             if (onPick != null)
             {
                 _canBePickedUp = false;
-                //onPick.Invoke(pickingPlayer);
             }
         }
     }

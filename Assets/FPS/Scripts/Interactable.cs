@@ -4,44 +4,45 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public float radius = 3f; //interactable radius
-    public Transform interactionTransform; //position of the interaction
+    private bool _canBeInteractedWith;
+    private PlayerCharacterController _pickingPlayer;
 
-    bool isFocus = false; //is the player interacting with this object?
-    bool hasInteracted = false; //Has the object already been interacted with?
+    public delegate void onInteract();
+
     Transform playerTransform; //player position
 
     public virtual void Interact() {
         //To be overridden
         Debug.Log("Interacting with " + transform.name);
     }
-
     void Update() {
-        //if this interactableis focused
-        if(isFocus && !hasInteracted) {
-            //if the player is close enough
-            float distanceFromPlayer = Vector3.Distance(playerTransform.position, transform.position);
-            if(distanceFromPlayer <= radius) {
-                Interact();
-                hasInteracted = true;
+        //if in interactable range
+        if (_canBeInteractedWith)
+        {
+            //if the f key is pressed
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Interact(); //Perform some assigned interaction
             }
         }
     }
-    public void OnFocused(Transform transform) {
-        isFocus = true;
-        playerTransform = transform;
-        hasInteracted = false;
-    }
-    public void OnDefocused() {
-        isFocus = false;
-        playerTransform = null;
-        hasInteracted = false;
-    }
 
-    void OnDrawGizmosSelected() {
-        if(interactionTransform == null) interactionTransform = playerTransform;
+    private void OnTriggerEnter(Collider other)
+    {
+        _pickingPlayer = other.GetComponent<PlayerCharacterController>();
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        if (_pickingPlayer != null)
+        {
+            _canBeInteractedWith = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        _pickingPlayer = other.GetComponent<PlayerCharacterController>();
+
+        if (_pickingPlayer != null)
+        {
+            _canBeInteractedWith = false;
+        }
     }
 }

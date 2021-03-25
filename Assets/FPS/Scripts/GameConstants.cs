@@ -20,4 +20,8 @@
     public const string k_ButtonNamePauseMenu               = "Pause Menu";
     public const string k_ButtonNameSubmit                  = "Submit";
     public const string k_ButtonNameCancel                  = "Cancel";
+    //OUR STUFF
+    public const string k_ButtonNameInteract                = "Interact/Pick up";
+    public const string k_ButtonNameInventory               = "Open Inventory";
+    //END OF OUR STUFF
 }

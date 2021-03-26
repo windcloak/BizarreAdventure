@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+
     private bool _canBeInteractedWith;
     private PlayerCharacterController _pickingPlayer;
 
@@ -11,20 +10,20 @@ public class Interactable : MonoBehaviour
 
     Transform playerTransform; //player position
 
-    public virtual void Interact() {
-        //To be overridden
-        Debug.Log("Interacting with " + transform.name);
-    }
     void Update() {
         //if in interactable range
-        if (_canBeInteractedWith)
+        if (_canBeInteractedWith && Input.GetKeyDown(KeyCode.F))
         {
             //if the f key is pressed
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Interact(); //Perform some assigned interaction
-            }
+            Interact(); //Perform some assigned interaction
         }
+    }
+
+    public virtual void Interact()
+    {
+        //To be overridden
+        Debug.Log("Interacting with " + transform.name);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

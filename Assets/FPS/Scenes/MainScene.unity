@@ -1225,18 +1225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 925cf5306e3efd843b2b9b802548c137, type: 2}
---- !u!114 &554213484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554213480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaec450367232c4a8efab84a958251f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &567189782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4238,9 +4226,9 @@ GameObject:
   - component: {fileID: 1906918312}
   - component: {fileID: 1906918311}
   - component: {fileID: 1906918310}
-  - component: {fileID: 1906918309}
   - component: {fileID: 1906918314}
   - component: {fileID: 1906918313}
+  - component: {fileID: 1906918309}
   m_Layer: 0
   m_Name: Placeholder_Pickup_Inventory
   m_TagString: Untagged
@@ -4276,9 +4264,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906918307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaec450367232c4a8efab84a958251f, type: 3}
+  m_Script: {fileID: 11500000, guid: 07fd1c06f3280f641854f28615332721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 925cf5306e3efd843b2b9b802548c137, type: 2}
 --- !u!135 &1906918310
 SphereCollider:
   m_ObjectHideFlags: 0

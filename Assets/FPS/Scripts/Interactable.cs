@@ -23,7 +23,6 @@ public class Interactable : MonoBehaviour
     {
         //To be overridden
         Debug.Log("Interacting with " + transform.name);
-        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

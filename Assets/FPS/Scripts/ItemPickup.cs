@@ -8,7 +8,6 @@ public class ItemPickup : Interactable
 {
     public Item item;
     Pickup m_Pickup;
-    public PickupHUD pickHUD;
 
     public override void Interact()
     {
@@ -38,15 +37,5 @@ public class ItemPickup : Interactable
             return;
         }
         Debug.Log("Inventory full!");
-    }
-    public void OnTriggerEnter(Collider other)
-    {
-        // Todo: check if item is an inventory item
-        pickHUD.OpenPickupPanel();
-    }
-
-    public void OnTriggerExit(Collider other)
-    {
-        pickHUD.ClosePickupPanel();
     }
 }

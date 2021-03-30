@@ -17,7 +17,7 @@ public class InventoryHUD : MonoBehaviour
         }
 
         // press I to pull up inventory
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("Inventory"))
         {
             // open panel if it's not already open
             if (!isInventoryOpen)   
@@ -30,7 +30,7 @@ public class InventoryHUD : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.I)
+        if (Input.GetButtonDown("Inventory")
     || (menuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
         {
             SetPauseMenuActivation(!menuRoot.activeSelf);

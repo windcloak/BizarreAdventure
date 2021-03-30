@@ -4,12 +4,13 @@ using UnityEngine.EventSystems;
 public class InventoryHUD : MonoBehaviour
 {
     public GameObject menuRoot;
-    public static bool isInventoryOpen;
+    static bool _isInventoryOpen;
     PlayerInputHandler m_PlayerInputsHandler;
 
     // Update is called once per frame
     void Update()
     {
+        // this breaks the pause menu ;__;
         //if (!menuRoot.activeSelf && Input.GetMouseButtonDown(0))
         //{
         //    Cursor.lockState = CursorLockMode.Locked;
@@ -20,7 +21,7 @@ public class InventoryHUD : MonoBehaviour
         if (Input.GetButtonDown("Inventory"))
         {
             // open panel if it's not already open
-            if (!isInventoryOpen)   
+            if (!_isInventoryOpen)   
             {
                 OpenInventoryPanel();
             }
@@ -30,12 +31,18 @@ public class InventoryHUD : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Inventory")
-    || (menuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
+        // leaves inventory panel when you press Esc key
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SetPauseMenuActivation(!menuRoot.activeSelf);
-
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
+
+    //    if (Input.GetButtonDown("Inventory")
+    //|| (menuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
+    //    {
+    //        SetPauseMenuActivation(!menuRoot.activeSelf);
+    //    }
 
         if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
         {
@@ -76,13 +83,13 @@ public class InventoryHUD : MonoBehaviour
 
     public void OpenInventoryPanel()
     {
-        isInventoryOpen = true;
+        _isInventoryOpen = true;
         menuRoot.SetActive(true);
     }
 
     public void CloseInventoryPanel()
     {
-        isInventoryOpen = false;
+        _isInventoryOpen = false;
         menuRoot.SetActive(false);
     }
 }

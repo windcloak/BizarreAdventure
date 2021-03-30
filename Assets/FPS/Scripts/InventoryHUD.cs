@@ -10,11 +10,11 @@ public class InventoryHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!menuRoot.activeSelf && Input.GetMouseButtonDown(0))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        //if (!menuRoot.activeSelf && Input.GetMouseButtonDown(0))
+        //{
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //}
 
         // press I to pull up inventory
         if (Input.GetButtonDown("Inventory"))

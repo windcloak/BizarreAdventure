@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
 public class PlayerCharacterController : MonoBehaviour
@@ -147,8 +148,13 @@ public class PlayerCharacterController : MonoBehaviour
 
     void Update()
     {
+        //check if we are hovering over ui
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         // check for Y kill
-        if(!isDead && transform.position.y < killHeight)
+        if (!isDead && transform.position.y < killHeight)
         {
             m_Health.Kill();
         }

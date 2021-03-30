@@ -33,6 +33,10 @@ public class InventorySlot : MonoBehaviour
     public void UseItem()
     {
         // customize for item
-        Debug.Log("item is being used");
+        if (item != null)
+        {
+            item.Use();
+        }
+
     }
 }

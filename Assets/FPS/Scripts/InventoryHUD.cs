@@ -3,18 +3,23 @@ using UnityEngine.EventSystems;
 
 public class InventoryHUD : MonoBehaviour
 {
-    public GameObject menuRoot;
-    static bool _isInventoryOpen;
+    public GameObject menuRoot1;
+    static bool _isInventoryOpen = false;
     PlayerInputHandler m_PlayerInputsHandler;
+
+    public void Display()
+    {
+        menuRoot1.SetActive(true);
+    }
 
     // Update is called once per frame
     void Update()
     {
         // this breaks the pause menu ;__;
-        //if (!menuRoot.activeSelf && Input.GetMouseButtonDown(0))
+        //if (!menuRoot1.activeSelf && Input.GetMouseButtonDown(0))
         //{
         //    Cursor.lockState = CursorLockMode.Locked;
-        //    Cursor.visible = false;
+        //    Cursor.visible = true;
         //}
 
         // press I to pull up inventory
@@ -38,11 +43,12 @@ public class InventoryHUD : MonoBehaviour
             Cursor.visible = true;
         }
 
-    //    if (Input.GetButtonDown("Inventory")
-    //|| (menuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
-    //    {
-    //        SetPauseMenuActivation(!menuRoot.activeSelf);
-    //    }
+        if (Input.GetButtonDown("Inventory")
+            || (menuRoot1.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
+        {
+            SetPauseMenuActivation(!menuRoot1.activeSelf);
+
+        }
 
         if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
         {
@@ -58,25 +64,27 @@ public class InventoryHUD : MonoBehaviour
     {
         m_PlayerInputsHandler = FindObjectOfType<PlayerInputHandler>();
         DebugUtility.HandleErrorIfNullFindObject<PlayerInputHandler, InGameMenuManager>(m_PlayerInputsHandler, this);
-        menuRoot.SetActive(false);
+        menuRoot1.SetActive(false);
     }
 
     void SetPauseMenuActivation(bool active)
     {
-        menuRoot.SetActive(active);
+        menuRoot1.SetActive(active);
 
-        if (menuRoot.activeSelf)
+        if (menuRoot1.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
             EventSystem.current.SetSelectedGameObject(null);
+            WeaponController.isPaused = true;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1f;
+            WeaponController.isPaused = false;
         }
 
     }
@@ -84,12 +92,12 @@ public class InventoryHUD : MonoBehaviour
     public void OpenInventoryPanel()
     {
         _isInventoryOpen = true;
-        menuRoot.SetActive(true);
+        menuRoot1.SetActive(true);
     }
 
     public void CloseInventoryPanel()
     {
         _isInventoryOpen = false;
-        menuRoot.SetActive(false);
+        menuRoot1.SetActive(false);
     }
 }

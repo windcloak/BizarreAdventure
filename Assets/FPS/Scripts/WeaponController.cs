@@ -118,6 +118,9 @@ public class WeaponController : MonoBehaviour
 
     const string k_AnimAttackParameter = "Attack";
 
+    // is the game paused
+    public static bool isPaused = false;
+
     void Awake()
     {
         m_CurrentAmmo = maxAmmo;
@@ -252,6 +255,10 @@ public class WeaponController : MonoBehaviour
 
     public bool HandleShootInputs(bool inputDown, bool inputHeld, bool inputUp)
     {
+        if (isPaused)
+        {
+            return false;
+        }
         m_wantsToShoot = inputDown || inputHeld;
         switch (shootType)
         {

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerInputHandler : MonoBehaviour
     PlayerCharacterController m_PlayerCharacterController;
     bool m_FireInputWasHeld;
 
+
     private void Start()
     {
         m_PlayerCharacterController = GetComponent<PlayerCharacterController>();
@@ -27,6 +29,7 @@ public class PlayerInputHandler : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
 
     private void LateUpdate()
     {
@@ -40,6 +43,12 @@ public class PlayerInputHandler : MonoBehaviour
 
     public Vector3 GetMoveInput()
     {
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log("player input handler paused!!");
+            return Vector3.zero;
+        }
         if (CanProcessInput())
         {
             Vector3 move = new Vector3(Input.GetAxisRaw(GameConstants.k_AxisNameHorizontal), 0f, Input.GetAxisRaw(GameConstants.k_AxisNameVertical));

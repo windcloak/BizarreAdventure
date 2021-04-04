@@ -2,8 +2,8 @@
 
 public class Menu : MonoBehaviour
 {
-    public void Quit()
+    public void Tutorial()
     {
-        Application.Quit();
+        Debug.Log("show tutorial pic or go to tutorial scene");
     }
 }

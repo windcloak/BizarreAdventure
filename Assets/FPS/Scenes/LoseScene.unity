@@ -289,12 +289,12 @@ RectTransform:
   m_Children:
   - {fileID: 692678078}
   m_Father: {fileID: 1715351557}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96.1, y: -196.5}
-  m_SizeDelta: {x: 103.2979, y: 36.918625}
+  m_AnchoredPosition: {x: -94.9, y: -197.1}
+  m_SizeDelta: {x: 105.75574, y: 38.14756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &174393594
 MonoBehaviour:
@@ -499,8 +499,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.5
+  m_fontSize: 32.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 969829814}
   - component: {fileID: 969829813}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +879,7 @@ RectTransform:
   m_Children:
   - {fileID: 50525568}
   m_Father: {fileID: 1715351557}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1062,6 +1062,7 @@ GameObject:
   - component: {fileID: 1196971886}
   - component: {fileID: 1196971885}
   - component: {fileID: 1196971884}
+  - component: {fileID: 1196971888}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1082,7 +1083,7 @@ RectTransform:
   m_Children:
   - {fileID: 1624488518}
   m_Father: {fileID: 1715351557}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1147,7 +1148,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1196971888}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -1195,6 +1196,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196971882}
   m_CullTransparentMesh: 0
+--- !u!114 &1196971888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196971882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5af1bc94b6722b4eb89d070a0809dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1624488517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1425,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715351557}
-  - component: {fileID: 1715351558}
   m_Layer: 0
   m_Name: LoseMenu
   m_TagString: Untagged
@@ -1434,24 +1446,12 @@ Transform:
   - {fileID: 1844865839}
   - {fileID: 287730033}
   - {fileID: 1814912637}
-  - {fileID: 1196971883}
   - {fileID: 969829812}
   - {fileID: 174393593}
+  - {fileID: 1196971883}
   m_Father: {fileID: 1847275007}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1715351558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715351556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f23293eca4f8f40b89e86786e73c98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1814912632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,8 +1836,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4290989596
+  m_fontColor: {r: 0.10980393, g: 0.30588236, b: 0.76470596, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

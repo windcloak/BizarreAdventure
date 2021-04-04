@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
-public class LoseMenu : MonoBehaviour
+public class QuitButton : MonoBehaviour
 {
-
     public void Quit()
     {
         Application.Quit();

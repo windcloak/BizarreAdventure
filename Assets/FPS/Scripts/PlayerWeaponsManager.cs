@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerInputHandler))]
 public class PlayerWeaponsManager : MonoBehaviour
@@ -104,6 +105,11 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log("player weapons manager paused!!");
+            return;
+        }
         // shoot handling
         WeaponController activeWeapon = GetActiveWeapon();
 

@@ -148,12 +148,11 @@ public class PlayerCharacterController : MonoBehaviour
 
     void Update()
     {
+        //check if we are hovering over ui
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log("player character controller paused!!");
             return;
         }
-
         // check for Y kill
         if (!isDead && transform.position.y < killHeight)
         {
@@ -242,21 +241,14 @@ public class PlayerCharacterController : MonoBehaviour
 
     void HandleCharacterMovement()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            Debug.Log("paused right now");
-            return;
-        }
         // horizontal character rotation
         {
- 
             // rotate the transform with the input speed around its local Y axis
             transform.Rotate(new Vector3(0f, (m_InputHandler.GetLookInputsHorizontal() * rotationSpeed * RotationMultiplier), 0f), Space.Self);
         }
 
         // vertical camera rotation
         {
-
             // add vertical inputs to the camera's vertical angle
             m_CameraVerticalAngle += m_InputHandler.GetLookInputsVertical() * rotationSpeed * RotationMultiplier;
 

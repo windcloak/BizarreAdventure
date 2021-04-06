@@ -148,11 +148,6 @@ public class PlayerCharacterController : MonoBehaviour
 
     void Update()
     {
-        //check if we are hovering over ui
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
         // check for Y kill
         if (!isDead && transform.position.y < killHeight)
         {

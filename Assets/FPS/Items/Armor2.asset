@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b907aa607c2c2e459bd868c746738ca, type: 3}
   m_Name: Armor2
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: Armor 2
+  icon: {fileID: 21300000, guid: 8f81e6e3e3678f44b895dddfca48e26f, type: 3}
   isDefaultItem: 0
+  armorModifier: 0
+  hp: 0

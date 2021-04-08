@@ -14,9 +14,13 @@ public class EquipmentManager : MonoBehaviour
     #endregion
 
     Equipment[] currentEquipment;
+    public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
+    public OnEquipmentChanged onEquipmentChanged;
+    Inventory inventory;
 
     private void Start()
     {
+        inventory = Inventory.instance;
         // get array of all elements in our equipment slot
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
@@ -25,7 +29,55 @@ public class EquipmentManager : MonoBehaviour
     public void Equip(Equipment newItem)
     {
         int slotIndex = (int)newItem.equipSlot;
+        Equipment oldItem = null;
+        // check if we have to swap
+        if (currentEquipment[slotIndex] != null)
+        {
+            // TODO need to implement
+            oldItem = currentEquipment[slotIndex];
+            Debug.Log("drop currently equipped item on ground");
+        }
+
+        if (onEquipmentChanged != null)
+        {
+            onEquipmentChanged.Invoke(newItem, oldItem);
+        }
+
         currentEquipment[slotIndex] = newItem;
-        Debug.Log("equipped " + newItem.name);
+        Debug.Log("equipped " + newItem.name + " in slot " + slotIndex.ToString());
+
+    }
+
+    public void Unequip(int slotIndex)
+    {
+        if (currentEquipment[slotIndex] != null)
+        {
+            Equipment oldItem = currentEquipment[slotIndex];
+            // TODO spawn old item onto floor
+            currentEquipment[slotIndex] = null;
+
+            if (onEquipmentChanged != null)
+            {
+                onEquipmentChanged.Invoke(null, oldItem);
+            }
+        }
+
+    }
+
+    public void UnequipAll()
+    {
+        for (int i=0; i < currentEquipment.Length; i++)
+        {
+            Unequip(i);
+        }
+    }
+
+    private void Update()
+    {
+        // Press U to unequip everything
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            UnequipAll();
+        }
     }
 }

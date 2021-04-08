@@ -51,20 +51,22 @@ public class Inventory : MonoBehaviour
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         int slotIndex = (int)item.equipSlot;
 
-        if (slotIndex == 0)
+        if (slotIndex == 0) // Armor
         {
 
             UpdateArmor();
             UpdateArmorSlot(item);
 
         }
-        else if (slotIndex == 1)
+        else if (slotIndex == 1)    // Helmet
         {
             UpdateHelmet();
+            UpdateHelmetSlot(item);
         }
-        else if (slotIndex == 2)
+        else if (slotIndex == 2)    // Potion
         {
             UpdatePotions(1);
+            UpdatePotionSlot(item);
         }
 
         // TODO may move this
@@ -111,8 +113,16 @@ public class Inventory : MonoBehaviour
     {
         return m_potions;
     }
-    public void UpdateArmorSlot(Equipment item)
+    void UpdateArmorSlot(Equipment item)
     {
         armorSlot.AddItem(item);
+    }
+    void UpdateHelmetSlot(Equipment item)
+    {
+        helmetSlot.AddItem(item);
+    }
+    void UpdatePotionSlot(Equipment item)
+    {
+        potionSlot.AddItem(item);
     }
 }

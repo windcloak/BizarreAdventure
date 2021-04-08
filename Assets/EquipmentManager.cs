@@ -33,9 +33,12 @@ public class EquipmentManager : MonoBehaviour
         // check if we have to swap
         if (currentEquipment[slotIndex] != null)
         {
-            // TODO need to implement
+            // TODO need to implement swap
             oldItem = currentEquipment[slotIndex];
-            Debug.Log("drop currently equipped item on ground");
+            Debug.Log("drop currently equipped item " + oldItem.name + " on ground");
+        } else
+        {
+            Debug.Log("nothing equipped");
         }
 
         if (onEquipmentChanged != null)
@@ -60,6 +63,8 @@ public class EquipmentManager : MonoBehaviour
             {
                 onEquipmentChanged.Invoke(null, oldItem);
             }
+
+            Debug.Log("unequipped this " + currentEquipment[slotIndex]);
         }
 
     }
@@ -74,10 +79,10 @@ public class EquipmentManager : MonoBehaviour
 
     private void Update()
     {
-        // Press U to unequip everything
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            UnequipAll();
-        }
+        //// Press U to unequip everything
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    UnequipAll();
+        //}
     }
 }

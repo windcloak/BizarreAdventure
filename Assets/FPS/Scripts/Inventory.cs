@@ -51,6 +51,8 @@ public class Inventory : MonoBehaviour
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         int slotIndex = (int)item.equipSlot;
 
+
+        // Updating UI
         if (slotIndex == 0) // Armor
         {
 

@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     public Image icon;
-    Item item; //current item in the slot
+    Equipment item; //current item in the slot
 
-    public void AddItem (Item newItem)
+    public void AddItem (Equipment newItem)
     {
         item = newItem;
         icon.sprite = item.icon;

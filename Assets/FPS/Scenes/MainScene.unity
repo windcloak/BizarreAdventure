@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 439959783}
   - component: {fileID: 439959782}
   m_Layer: 5
-  m_Name: Amount
+  m_Name: PotionAmount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,16 +630,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 75063828274bdb145a55f6dd2f22e8b2, type: 2}
-  m_sharedMaterial: {fileID: 21098970014090698, guid: 75063828274bdb145a55f6dd2f22e8b2,
+  m_fontAsset: {fileID: 11400000, guid: 106dddce1f2404b45bbfa40eab1b84ea, type: 2}
+  m_sharedMaterial: {fileID: 21649359081121634, guid: 106dddce1f2404b45bbfa40eab1b84ea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285603362
-  m_fontColor: {r: 0.133277, g: 0.11921501, b: 0.4433962, a: 1}
+    rgba: 4278518912
+  m_fontColor: {r: 0.5, g: 0.016509444, b: 0.02084279, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 1319569688}
   - component: {fileID: 1319569687}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3186,8 +3186,9 @@ GameObject:
   - component: {fileID: 1690795908}
   - component: {fileID: 1690795910}
   - component: {fileID: 1690795909}
+  - component: {fileID: 1690795911}
   m_Layer: 5
-  m_Name: BlueCircle
+  m_Name: PinkCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3232,7 +3233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d8db7579e6231a4d9009b2a240b5445, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c371200fb5bd4040b460ac2c94d9f3c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3250,6 +3251,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690795907}
   m_CullTransparentMesh: 0
+--- !u!114 &1690795911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690795907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49952585ad10ebf4688be253fc5fc030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionAmount: {fileID: 439959782}
 --- !u!1001 &1771139419
 PrefabInstance:
   m_ObjectHideFlags: 0

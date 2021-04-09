@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
 
     public static bool hasArmor = false;
     public static bool hasHelmet = false;
-    int m_potions = 0;
+    public static int potions = 0;
 
     private void Start()
     {
@@ -99,23 +99,18 @@ public class Inventory : MonoBehaviour
     {
         hasHelmet = !hasHelmet;
     }
-    void UpdatePotions(int n)
+    public static void UpdatePotions(int n)
     {
-        if (m_potions + n > 0)
+        if (potions + n > 0)
         {
-            m_potions += n;
+            potions += n;
         }
         else
         {
-            m_potions = 0;
+            potions = 0;
         }
     }
 
-    // Returns number of potions player has
-    public int GetPotions()
-    {
-        return m_potions;
-    }
     void UpdateArmorSlot(Equipment item)
     {
         armorSlot.AddItem(item);

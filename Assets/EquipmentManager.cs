@@ -86,6 +86,8 @@ public class EquipmentManager : MonoBehaviour
         //}
         if (Input.GetKeyDown(KeyCode.H))
         {
+            Inventory.UpdatePotions(-1);
+            // TODO need to implement player health recovering
             Debug.Log("used potion");
         }
 

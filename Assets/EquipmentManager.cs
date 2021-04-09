@@ -84,5 +84,22 @@ public class EquipmentManager : MonoBehaviour
         //{
         //    UnequipAll();
         //}
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("used potion");
+        }
+
+
     }
+
+    //public void UsePotion()
+    //{
+    //    Health playerHealth = player.GetComponent<Health>();
+    //    if (playerHealth && playerHealth.canPickup())
+    //    {
+    //        playerHealth.Heal(healAmount);
+    //    }
+    //}
+
+
 }

@@ -71,7 +71,8 @@ public class Inventory : MonoBehaviour
             UpdatePotionSlot(item);
         }
 
-        // TODO may move this
+        // TODO implement a use for potion
+        // puts it into "equipped"
         if (slotIndex < 2)
         {
             item.Use();

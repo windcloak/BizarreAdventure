@@ -87,4 +87,11 @@ public class Health : MonoBehaviour
             }
         }
     }
+
+    // Increase max health when wearing a shield
+    public void IncreaseHealth(float n)
+    {
+        maxHealth *= n;
+        currentHealth = maxHealth;
+    }
 }

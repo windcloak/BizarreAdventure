@@ -19,7 +19,6 @@ public class EquipmentManager : MonoBehaviour
     public OnEquipmentChanged onEquipmentChanged;
     Inventory inventory;
     public PlayerCharacterController player;
-    private UnityAction m_onUsePotion;
 
     private void Start()
     {
@@ -41,7 +40,23 @@ public class EquipmentManager : MonoBehaviour
             Debug.Log("drop currently equipped item " + oldItem.name + " on ground");
         } else
         {
-            Debug.Log("nothing equipped");
+            Debug.Log("equipped " + newItem.name);
+        }
+
+        switch (slotIndex)
+        {
+            case 0:
+                UseShield();
+                break;
+            case 1:
+                UseHelmet();
+                break;
+            case 2:
+                // potion equipped
+                break;
+            default:
+                Debug.Log("wrong slot index");
+                break;
         }
 
         if (onEquipmentChanged != null)
@@ -97,7 +112,7 @@ public class EquipmentManager : MonoBehaviour
     }
 
     // Recovers player health
-    public void UsePotion()
+    void UsePotion()
     {
         Health playerHealth = player.GetComponent<Health>();
         if (playerHealth && playerHealth.canPickup())
@@ -106,5 +121,17 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+    // Increases player max HP
+    void UseShield()
+    {
+        Health playerHealth = player.GetComponent<Health>();
+        float healthFactor = 1.2f;
+        playerHealth.IncreaseHealth(healthFactor);
+        Debug.Log("max health is " + playerHealth.maxHealth);
+    }
 
+    void UseHelmet()
+    {
+        Debug.Log("used helmet");
+    }
 }

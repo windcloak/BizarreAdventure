@@ -8,7 +8,7 @@ public class Potion : MonoBehaviour {
 
     [Header("Parameters")]
     [Tooltip("Amount of health to heal")]
-    public float healAmount = 40;
+    public static float healAmount = 40;
     PlayerCharacterController player;
     // Start is called before the first frame update
     void Start()
@@ -21,12 +21,5 @@ public class Potion : MonoBehaviour {
     {
     }
 
-    public void UsePotion()
-    {
-        Health playerHealth = player.GetComponent<Health>();
-        if (playerHealth && playerHealth.canPickup())
-        {
-            playerHealth.Heal(healAmount);
-        }
-    }
+  
 }

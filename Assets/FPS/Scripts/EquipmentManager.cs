@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EquipmentManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class EquipmentManager : MonoBehaviour
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
     Inventory inventory;
+    public PlayerCharacterController player;
+    private UnityAction m_onUsePotion;
 
     private void Start()
     {
@@ -24,6 +27,10 @@ public class EquipmentManager : MonoBehaviour
         // get array of all elements in our equipment slot
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
+
+        //player = GetComponent<PlayerCharacterController>();
+        //Make a Unity Action that calls your function
+        m_onUsePotion += UsePotion;
     }
 
     public void Equip(Equipment newItem)
@@ -88,20 +95,22 @@ public class EquipmentManager : MonoBehaviour
         {
             Inventory.UpdatePotions(-1);
             // TODO need to implement player health recovering
+            //Potion.UsePotion();
+            UsePotion();
             Debug.Log("used potion");
         }
 
 
     }
 
-    //public void UsePotion()
-    //{
-    //    Health playerHealth = player.GetComponent<Health>();
-    //    if (playerHealth && playerHealth.canPickup())
-    //    {
-    //        playerHealth.Heal(healAmount);
-    //    }
-    //}
+    public void UsePotion()
+    {
+        Health playerHealth = player.GetComponent<Health>();
+        if (playerHealth && playerHealth.canPickup())
+        {
+            playerHealth.Heal(Potion.healAmount);
+        }
+    }
 
 
 }

@@ -20,6 +20,8 @@ public class EquipmentManager : MonoBehaviour
     Inventory inventory;
     public PlayerCharacterController player;
 
+    float m_healAmount;
+
     private void Start()
     {
         inventory = Inventory.instance;
@@ -28,7 +30,7 @@ public class EquipmentManager : MonoBehaviour
         currentEquipment = new Equipment[numSlots];
     }
 
-    public void Equip(Equipment newItem)
+    public void Equip(Equipment newItem, float armorModifier, float helmetModifier)
     {
         int slotIndex = (int)newItem.equipSlot;
         Equipment oldItem = null;
@@ -42,17 +44,17 @@ public class EquipmentManager : MonoBehaviour
         {
             Debug.Log("equipped " + newItem.name);
         }
-
+     
         switch (slotIndex)
         {
             case 0:
-                UseShield();
+                UseShield(armorModifier);
                 break;
             case 1:
-                UseHelmet();
+                UseHelmet(helmetModifier);
                 break;
             case 2:
-                // potion equipped
+                // Can't pass potionModifier in here because we don't use it immediately
                 break;
             default:
                 Debug.Log("wrong slot index");
@@ -102,9 +104,8 @@ public class EquipmentManager : MonoBehaviour
         //{
         //    UnequipAll();
         //}
-        if (Input.GetButtonDown(GameConstants.k_ButtonNamePotion))
+        if (Input.GetButtonDown(GameConstants.k_ButtonNamePotion) && Inventory.potions > 0)
         {
-            Inventory.UpdatePotions(-1);
             UsePotion();
         }
 
@@ -114,23 +115,35 @@ public class EquipmentManager : MonoBehaviour
     // Recovers player health
     void UsePotion()
     {
+        if (Inventory.potions <= 0)
+        {
+            Debug.Log("you don't have any potions!");
+            return;
+        }
         Health playerHealth = player.GetComponent<Health>();
+
         if (playerHealth && playerHealth.canPickup())
         {
-            playerHealth.Heal(Potion.healAmount);
+            playerHealth.Heal(Potion.healAmount);   // from Potion script
         }
+        Inventory.UpdatePotions(-1);
+        if (Inventory.potions == 0)
+        {
+            inventory.Remove(currentEquipment[2]);
+        }
+        Debug.Log("used potion");
+
     }
 
     // Increases player max HP
-    void UseShield()
+    void UseShield(float healthFactor)
     {
         Health playerHealth = player.GetComponent<Health>();
-        float healthFactor = 1.2f;
         playerHealth.IncreaseHealth(healthFactor);
         Debug.Log("max health is " + playerHealth.maxHealth);
     }
 
-    void UseHelmet()
+    void UseHelmet(float helmetModifier)
     {
         Debug.Log("used helmet");
     }

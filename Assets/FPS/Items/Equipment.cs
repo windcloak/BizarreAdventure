@@ -4,16 +4,17 @@
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
 public class Equipment : Item
 {
-    public int armorModifier;
-    public int helmetModifier;
-    public int potionModifier;
+    public float armorModifier;
+    public float helmetModifier;
+    public float potionModifier;
     public EquipmentSlot equipSlot;
     public override void Use()
     {
         base.Use();
         // Equip the item
-        EquipmentManager.instance.Equip(this);
+        EquipmentManager.instance.Equip(this, armorModifier, helmetModifier);
     }
+
 
 }
 

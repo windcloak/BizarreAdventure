@@ -14,6 +14,7 @@ public class Equipment : Item
         // Equip the item
         EquipmentManager.instance.Equip(this);
     }
+
 }
 
 public enum EquipmentSlot {  Armor, Helmet, Potion }

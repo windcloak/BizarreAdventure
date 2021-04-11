@@ -27,10 +27,6 @@ public class EquipmentManager : MonoBehaviour
         // get array of all elements in our equipment slot
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
-
-        //player = GetComponent<PlayerCharacterController>();
-        //Make a Unity Action that calls your function
-        m_onUsePotion += UsePotion;
     }
 
     public void Equip(Equipment newItem)
@@ -94,15 +90,13 @@ public class EquipmentManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             Inventory.UpdatePotions(-1);
-            // TODO need to implement player health recovering
-            //Potion.UsePotion();
             UsePotion();
-            Debug.Log("used potion");
         }
 
 
     }
 
+    // Recovers player health
     public void UsePotion()
     {
         Health playerHealth = player.GetComponent<Health>();

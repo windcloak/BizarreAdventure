@@ -52,8 +52,7 @@ public class Pickup : MonoBehaviour
         transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime, Space.Self);
 
         //Checking for key press
-        //TODO: FIX THIS SLOPPINESS
-        if (_canBePickedUp && Input.GetKeyDown(KeyCode.F))
+        if (_canBePickedUp && Input.GetButtonDown(GameConstants.k_ButtonNameInteract))
         {
             onPick.Invoke(_pickingPlayer);
         }

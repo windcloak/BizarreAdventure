@@ -1,6 +1,7 @@
 ﻿public class GameConstants
 {
     // all the constant string used across the game
+    // use with Edit > Project Settings > Input Manager
     public const string k_AxisNameVertical                  = "Vertical";
     public const string k_AxisNameHorizontal                = "Horizontal";
     public const string k_MouseAxisNameVertical             = "Mouse Y";
@@ -22,6 +23,7 @@
     public const string k_ButtonNameCancel                  = "Cancel";
     //OUR STUFF
     public const string k_ButtonNameInteract                = "Interact/Pick up";
-    public const string k_ButtonNameInventory               = "Open Inventory";
+    public const string k_ButtonNameInventory               = "Inventory";
+    public const string k_ButtonNamePotion                  = "Potion";
     //END OF OUR STUFF
 }

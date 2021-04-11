@@ -87,7 +87,7 @@ public class EquipmentManager : MonoBehaviour
         //{
         //    UnequipAll();
         //}
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetButtonDown(GameConstants.k_ButtonNamePotion))
         {
             Inventory.UpdatePotions(-1);
             UsePotion();

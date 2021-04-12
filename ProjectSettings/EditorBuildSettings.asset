@@ -10,10 +10,10 @@ EditorBuildSettings:
     guid: 56e3faabc5bb30f49a68bb8f1292f988
   - enabled: 1
     path: Assets/FPS/Scenes/HubScene.unity
-    guid: 011a6612e7f3c2a46818e7148f63baae
+    guid: d794a2ef8ba31d847ad3c19d03e2ddb9
   - enabled: 1
     path: Assets/FPS/Scenes/MainScene.unity
-    guid: d794a2ef8ba31d847ad3c19d03e2ddb9
+    guid: 011a6612e7f3c2a46818e7148f63baae
   - enabled: 1
     path: Assets/FPS/Scenes/WinScene.unity
     guid: 037d06fbede2b4041a843d9ee6fe750c

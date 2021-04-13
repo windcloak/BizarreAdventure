@@ -17,5 +17,5 @@ MonoBehaviour:
   isDefaultItem: 0
   armorModifier: 0
   helmetModifier: 0
-  potionModifier: 30
+  potionModifier: 40
   equipSlot: 2

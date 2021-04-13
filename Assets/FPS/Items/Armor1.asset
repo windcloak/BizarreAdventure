@@ -15,5 +15,7 @@ MonoBehaviour:
   name: Armor 1
   icon: {fileID: 21300000, guid: 21eab6670bb886a41a078e63ffbbdb62, type: 3}
   isDefaultItem: 0
-  armorModifier: 0
-  hp: 0
+  armorModifier: 1.2
+  helmetModifier: 0
+  potionModifier: 0
+  equipSlot: 0

@@ -43,4 +43,10 @@ public class Damageable : MonoBehaviour
             health.TakeDamage(totalDamage, damageSource);
         }
     }
+
+    // Decrease damage taken when wearing a helmet
+    public void DecreaseDamage(float n)
+    {
+        damageMultiplier *= n;
+    }
 }

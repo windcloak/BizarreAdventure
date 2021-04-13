@@ -94,4 +94,10 @@ public class Health : MonoBehaviour
         maxHealth *= n;
         currentHealth = maxHealth;
     }
+
+    public void ResetHealth()
+    {
+        maxHealth = 100f;
+        currentHealth = maxHealth;
+    }
 }

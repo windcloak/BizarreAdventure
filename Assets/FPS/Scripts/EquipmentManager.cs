@@ -39,6 +39,24 @@ public class EquipmentManager : MonoBehaviour
         {
             // TODO need to implement swap
             oldItem = currentEquipment[slotIndex];
+            // remove from Equipped list
+            Unequip(slotIndex);
+            // remove from Inventory
+            inventory.Remove(oldItem);
+
+            switch (slotIndex)
+            {
+                case 0:
+                    ResetShield();
+                    break;
+                case 1:
+                    ResetHelmet();
+                    break;
+                default:
+                    Debug.Log("N/A");
+                    break;
+            }
+
             Debug.Log("drop currently equipped item " + oldItem.name + " on ground");
         } else
         {
@@ -146,10 +164,25 @@ public class EquipmentManager : MonoBehaviour
     // Decreases damage taken
     void UseHelmet(float helmetModifier)
     {
-        Debug.Log("used helmet");
         Damageable playerDamage = player.GetComponent<Damageable>();
         playerDamage.DecreaseDamage(helmetModifier);
         Debug.Log("damageable " + playerDamage.damageMultiplier);
+
+    }
+
+    void ResetShield()
+    {
+        Health playerHealth = player.GetComponent<Health>();
+        playerHealth.ResetHealth();
+        Debug.Log("max health is reset to " + playerHealth.maxHealth);
+    }
+
+    void ResetHelmet()
+    {
+
+        Damageable playerDamage = player.GetComponent<Damageable>();
+        playerDamage.ResetDamage();
+        Debug.Log("reset damageable to " + playerDamage.damageMultiplier);
 
     }
 }

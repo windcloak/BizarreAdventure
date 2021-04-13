@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hashCode: -229269377
   material: {fileID: 21605244428125924}
-  materialHashCode: -326895084
+  materialHashCode: 672554879
   m_Version: 1.1.0
   m_SourceFontFileGUID: 035b6cab9473c4803838a9b4bbc0269a
   m_SourceFontFile_EditorRef: {fileID: 0}
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
+    m_FaceIndex: 0
     m_FamilyName: Merriweather
     m_StyleName: 
     m_PointSize: 37
@@ -28,7 +29,7 @@ MonoBehaviour:
     m_LineHeight: 46.5
     m_AscentLine: 36.4375
     m_CapLine: 27.499998
-    m_MeanLine: 0
+    m_MeanLine: 20.562498
     m_Baseline: 0
     m_DescentLine: -10.125
     m_SuperscriptOffset: 36.4375
@@ -3987,6 +3988,7 @@ MonoBehaviour:
   m_AtlasTextures:
   - {fileID: 28888467089585806}
   m_AtlasTextureIndex: 0
+  m_IsMultiAtlasTexturesEnabled: 0
   m_UsedGlyphRects: []
   m_FreeGlyphRects: []
   m_fontInfo:
@@ -6178,6 +6180,8 @@ Texture2D:
   m_TextureFormat: 1
   m_MipCount: 1
   m_IsReadable: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_IsPreProcessed: 0
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
   m_AlphaIsTransparency: 0

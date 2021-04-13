@@ -49,4 +49,10 @@ public class Damageable : MonoBehaviour
     {
         damageMultiplier *= n;
     }
+
+    // Reset damage to original
+    public void ResetDamage()
+    {
+        damageMultiplier = 1f;
+    }
 }

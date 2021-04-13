@@ -143,8 +143,13 @@ public class EquipmentManager : MonoBehaviour
         Debug.Log("max health is " + playerHealth.maxHealth);
     }
 
+    // Decreases damage taken
     void UseHelmet(float helmetModifier)
     {
         Debug.Log("used helmet");
+        Damageable playerDamage = player.GetComponent<Damageable>();
+        playerDamage.DecreaseDamage(helmetModifier);
+        Debug.Log("damageable " + playerDamage.damageMultiplier);
+
     }
 }

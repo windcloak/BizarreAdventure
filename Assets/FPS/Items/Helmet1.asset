@@ -16,6 +16,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: eec51d03ecdae8a469b24e816adb387a, type: 3}
   isDefaultItem: 0
   armorModifier: 0
-  helmetModifier: 0
+  helmetModifier: 0.7
   potionModifier: 0
   equipSlot: 1

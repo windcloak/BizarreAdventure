@@ -60,4 +60,4 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Photoshop files
-*clouds-skybox.psd
+*.psd

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b907aa607c2c2e459bd868c746738ca, type: 3}
-  m_Name: Helmet2
+  m_Name: Helmet_P2
   m_EditorClassIdentifier: 
   name: New Item
-  icon: {fileID: 21300000, guid: 9d8db7579e6231a4d9009b2a240b5445, type: 3}
+  icon: {fileID: 21300000, guid: 337612a6f9b5b564f9f15d1c061a8e70, type: 3}
   isDefaultItem: 0
   armorModifier: 0
   helmetModifier: 0.65

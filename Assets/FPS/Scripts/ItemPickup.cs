@@ -24,7 +24,6 @@ public class ItemPickup : Interactable
         if (wasPickedUp)
         {
             PlayPickupFeedback();
-            //Instantiate(pickupVFX, transform.position, transform.rotation);   // show effect
             Destroy(gameObject);
             return;
         }

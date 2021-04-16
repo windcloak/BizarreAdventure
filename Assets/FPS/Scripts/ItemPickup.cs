@@ -3,6 +3,7 @@
 public class ItemPickup : Interactable
 {
     public Equipment item;
+    public GameObject pickedEffect;
     Pickup m_Pickup;
 
     public override void Interact()
@@ -17,6 +18,8 @@ public class ItemPickup : Interactable
         bool wasPickedUp = Inventory.instance.Add(item);
         if (wasPickedUp)
         {
+
+            Instantiate(pickedEffect, transform.position, transform.rotation);   // show effect
             Destroy(gameObject);
             return;
         }

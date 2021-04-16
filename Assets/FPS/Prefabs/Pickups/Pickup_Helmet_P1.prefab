@@ -108,3 +108,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d7c0c2955490d994b8b7010f6222eafe, type: 2}
+  pickedEffect: {fileID: 100012, guid: 4e354172ca9de2e45b3021f36963f995, type: 3}

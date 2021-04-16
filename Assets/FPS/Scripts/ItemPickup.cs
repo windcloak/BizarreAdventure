@@ -2,9 +2,14 @@
 
 public class ItemPickup : Interactable
 {
+    [Tooltip("Item being picked up")]
     public Equipment item;
-    public GameObject pickedEffect;
+    [Tooltip("VFX spawned on pickup")]
+    public GameObject pickupVFX;
+    [Tooltip("Sound played on pickup")]
+    public AudioClip pickupSFX;
     Pickup m_Pickup;
+    bool m_HasPlayedFeedback;
 
     public override void Interact()
     {
@@ -18,11 +23,29 @@ public class ItemPickup : Interactable
         bool wasPickedUp = Inventory.instance.Add(item);
         if (wasPickedUp)
         {
-
-            Instantiate(pickedEffect, transform.position, transform.rotation);   // show effect
+            PlayPickupFeedback();
+            //Instantiate(pickupVFX, transform.position, transform.rotation);   // show effect
             Destroy(gameObject);
             return;
         }
         Debug.Log("Inventory full!");
+    }
+
+    public void PlayPickupFeedback()
+    {
+        if (m_HasPlayedFeedback)
+            return;
+
+        if (pickupSFX)
+        {
+            AudioUtility.CreateSFX(pickupSFX, transform.position, AudioUtility.AudioGroups.Pickup, 0f);
+        }
+
+        if (pickupVFX)
+        {
+            var pickupVFXInstance = Instantiate(pickupVFX, transform.position, Quaternion.identity);
+        }
+
+        m_HasPlayedFeedback = true;
     }
 }

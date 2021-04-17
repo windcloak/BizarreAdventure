@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Loot Drop
-  - Helmet1
+  - Basic Helmet
+  - Good Helmet
+  - Super Helmet
+  - Mega Helmet
   layers:
   - Default
   - TransparentFX

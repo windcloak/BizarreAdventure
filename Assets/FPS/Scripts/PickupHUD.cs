@@ -13,17 +13,20 @@ public class PickupHUD : MonoBehaviour
 
         switch (other.tag)
         {
-            case "Plain Helmet":
-                itemDescription = other.tag + " gives you a 20% decrease in damage";
+            case "Basic Helmet":
+                itemDescription = other.tag + " increases damage resist by 20%";
                 break;
-            //case 1:
-            //    UseHelmet(helmetModifier);
-            //    break;
-            //case 2:
-            //    // Can't pass potionModifier in here because we don't use it immediately
-            //    break;
+            case "Good Helmet":
+                itemDescription = other.tag + " increases damage resist by 35%";
+                break;
+            case "Super Helmet":
+                itemDescription = other.tag + " increases damage resist by 50%";
+                break;
+            case "Mega Helmet":
+                itemDescription = other.tag + " increases damage resist by 65%";
+                break;
             default:
-                Debug.Log("wrong slot index");
+                itemDescription = "This is a mysterious item";
                 break;
         }
     }

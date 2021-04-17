@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
     public OnItemChanged onItemChangedCallback;
 
     public List<Equipment> items = new List<Equipment>();
-    public int inventorySpace = 12; // includes 1 armor + 1 helmet + rest potions
+    public int inventorySpace = 20; // includes 1 armor + 1 helmet + rest potions
 
     public InventorySlot armorSlot, helmetSlot, potionSlot;
     Inventory inventory;

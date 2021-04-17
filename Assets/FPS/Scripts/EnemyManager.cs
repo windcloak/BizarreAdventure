@@ -12,6 +12,8 @@ public class EnemyManager : MonoBehaviour
     
     public UnityAction<EnemyController, int> onRemoveEnemy;
 
+    public bool isBossDead { get; private set; }
+
     private void Awake()
     {
         m_PlayerController = FindObjectOfType<PlayerCharacterController>();

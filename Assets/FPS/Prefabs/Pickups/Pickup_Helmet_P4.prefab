@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6103569563482552198}
   - component: {fileID: 3707848305955440316}
   - component: {fileID: 3885172454059332208}
-  - component: {fileID: -7769191787388693391}
+  - component: {fileID: -5045173233148694119}
+  - component: {fileID: -7860986492267351097}
   m_Layer: 0
   m_Name: Pickup_Helmet_P4
   m_TagString: Mega Helmet
@@ -111,11 +112,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 0e1ef2d8e6ddf2549891d5463d9c5631, type: 2}
   pickupVFX: {fileID: 100012, guid: 4e354172ca9de2e45b3021f36963f995, type: 3}
   pickupSFX: {fileID: 8300000, guid: 1f52c0b197bacdb40baad6d71e3a44c4, type: 3}
-  verticalBobFrequency: 1
-  bobbingAmount: 1
-  rotatingSpeed: 360
-  rotateDirection: 1
---- !u!54 &-7769191787388693391
+--- !u!54 &-5045173233148694119
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,3 +128,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7860986492267351097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743426935769060947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f71ed7eabe1f44240b129fa48d4647e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalBobFrequency: 1
+  bobbingAmount: 0.3
+  rotatingSpeed: 360
+  rotateDirection: 1

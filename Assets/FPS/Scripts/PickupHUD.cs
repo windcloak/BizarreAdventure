@@ -6,6 +6,8 @@ public class PickupHUD : MonoBehaviour
     public GameObject PickupPanel;
     public static string itemDescription;
 
+    string m_helmetDesc = " increases damage resistance by ";
+
     public void OpenPickupPanel(Collider other)
     {
         PickupPanel.SetActive(true);
@@ -13,16 +15,16 @@ public class PickupHUD : MonoBehaviour
         switch (other.tag)
         {
             case "Basic Helmet":
-                itemDescription = other.tag + " increases damage resist by 20%";
+                itemDescription = other.tag + m_helmetDesc + "20%";
                 break;
             case "Good Helmet":
-                itemDescription = other.tag + " increases damage resist by 35%";
+                itemDescription = other.tag + m_helmetDesc + "35%";
                 break;
             case "Super Helmet":
-                itemDescription = other.tag + " increases damage resist by 50%";
+                itemDescription = other.tag + m_helmetDesc + "50%";
                 break;
             case "Mega Helmet":
-                itemDescription = other.tag + " increases damage resist by 65%";
+                itemDescription = other.tag + m_helmetDesc + "65%";
                 break;
             default:
                 itemDescription = "This is a mysterious item";

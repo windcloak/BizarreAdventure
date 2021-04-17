@@ -154,10 +154,10 @@ public class EquipmentManager : MonoBehaviour
     }
 
     // Increases player max HP
-    void UseShield(float healthFactor)
+    void UseShield(float armorModifier)
     {
         Health playerHealth = player.GetComponent<Health>();
-        playerHealth.IncreaseHealth(healthFactor);
+        playerHealth.IncreaseHealth(armorModifier);
         Debug.Log("max health is " + playerHealth.maxHealth);
     }
 

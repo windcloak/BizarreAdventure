@@ -14,6 +14,7 @@ TagManager:
   - Good Shield
   - Super Shield
   - Mega Shield
+  - Potion
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
 
     void Update() {
         //if in interactable range
-        if (_canBeInteractedWith && Input.GetKeyDown(KeyCode.F))
+        if (_canBeInteractedWith && Input.GetButtonDown(GameConstants.k_ButtonNameInteract))
         {
             //if the f key is pressed
             Interact(); //Perform some assigned interaction

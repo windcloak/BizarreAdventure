@@ -6,12 +6,11 @@ public class PickupItemPrompt : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        // Todo: check if item is an inventory item
-        pickup.OpenPickupPanel();
+        pickup.OpenPickupPanel(other);
     }
 
     public void OnTriggerExit(Collider other)
     {
-        pickup.ClosePickupPanel();
+        pickup.ClosePickupPanel(other);
     }
 }

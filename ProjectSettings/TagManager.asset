@@ -5,10 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Loot Drop
+<<<<<<< Updated upstream
   - Basic Helmet
   - Good Helmet
   - Super Helmet
   - Mega Helmet
+=======
+  - Helmet1
+  - NPC
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

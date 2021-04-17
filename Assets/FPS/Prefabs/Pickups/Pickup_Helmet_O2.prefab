@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7850507342118161701}
   - component: {fileID: 8877456284720736219}
   - component: {fileID: 8877456284720736220}
+  - component: {fileID: -1768301807384000581}
   m_Layer: 0
   m_Name: Pickup_Helmet_O2
   m_TagString: Good Helmet
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8643083495060745456}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -27.09, y: 0.2609325, z: 3.36}
   m_LocalScale: {x: 35, y: 35, z: 35}
   m_Children: []
@@ -110,3 +111,23 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: e0b5fd1d52b9768429622d2047affbac, type: 2}
   pickupVFX: {fileID: 100012, guid: 4e354172ca9de2e45b3021f36963f995, type: 3}
   pickupSFX: {fileID: 8300000, guid: 1f52c0b197bacdb40baad6d71e3a44c4, type: 3}
+  verticalBobFrequency: 1
+  bobbingAmount: 1
+  rotatingSpeed: 360
+  rotateDirection: 1
+--- !u!54 &-1768301807384000581
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643083495060745456}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

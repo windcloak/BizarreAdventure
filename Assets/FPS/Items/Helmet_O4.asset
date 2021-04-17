@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b907aa607c2c2e459bd868c746738ca, type: 3}
   m_Name: Helmet_O4
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: Mega Helmet
+  icon: {fileID: 21300000, guid: d780bcb2ad3013f49898d77008f08f58, type: 3}
   isDefaultItem: 0
   armorModifier: 0
-  helmetModifier: 0
+  helmetModifier: 0.35
   potionModifier: 0
-  equipSlot: 0
+  equipSlot: 1

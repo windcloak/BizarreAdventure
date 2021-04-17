@@ -43,8 +43,4 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    //public void UpdateArmorSlot(Equipment item)
-    //{
-    //    armorSlot.AddItem(item);
-    //}
 }

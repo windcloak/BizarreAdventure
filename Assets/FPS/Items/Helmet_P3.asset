@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b907aa607c2c2e459bd868c746738ca, type: 3}
   m_Name: Helmet_P3
   m_EditorClassIdentifier: 
-  name: Ground Helmet
+  name: Super Helmet
   icon: {fileID: 21300000, guid: 5ed6aee5a11d3ad4090c15c4a178f618, type: 3}
   isDefaultItem: 0
   armorModifier: 0

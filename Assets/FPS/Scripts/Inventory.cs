@@ -111,6 +111,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    // if potions = 0, update that in UI
+    void ClearPotionSlot()
+    {
+        if (potions > 0)
+            return;
+
+        potionSlot.ClearSlot();
+    }
+
     void UpdateArmorSlot(Equipment item)
     {
         armorSlot.AddItem(item);

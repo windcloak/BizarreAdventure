@@ -10,6 +10,10 @@ TagManager:
   - Super Helmet
   - Mega Helmet
   - NPC
+  - Basic Shield
+  - Good Shield
+  - Super Shield
+  - Mega Shield
   layers:
   - Default
   - TransparentFX

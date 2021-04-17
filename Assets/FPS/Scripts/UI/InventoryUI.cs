@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    public Transform itemsParent;
+    //public Transform itemsParent;
     //InventorySlot[] slots;
     Inventory inventory;
-    //public InventorySlot armorSlot, helmetSlot, potionSlot;
+    public InventorySlot potionSlot;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +37,10 @@ public class InventoryUI : MonoBehaviour
         //    }
         //}
         //UpdateArmorSlot(inventory.items[0]);
+        if (Inventory.potions == 0)
+        {
+            potionSlot.ClearSlot();
+        }
     }
 
     //public void UpdateArmorSlot(Equipment item)

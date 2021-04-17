@@ -9,7 +9,6 @@ public class PickupHUD : MonoBehaviour
     public void OpenPickupPanel(Collider other)
     {
         PickupPanel.SetActive(true);
-        itemDescription = other.name;
 
         switch (other.tag)
         {
@@ -31,7 +30,7 @@ public class PickupHUD : MonoBehaviour
         }
     }
 
-    public void ClosePickupPanel(Collider other)
+    public void ClosePickupPanel()
     {
         PickupPanel.SetActive(false);
     }

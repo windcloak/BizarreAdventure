@@ -7,7 +7,7 @@ public class PickupHUD : MonoBehaviour
 
     string m_helmetDesc = " increases damage resistance by ";
     string m_shieldDesc = " increases max health by ";
-
+    string m_potionDesc = " increases health by ";
     public void OpenPickupPanel(Collider other)
     {
         PickupPanel.SetActive(true);
@@ -37,6 +37,9 @@ public class PickupHUD : MonoBehaviour
                 break;
             case "Mega Shield":
                 itemDescription = other.tag + m_shieldDesc + "100 hp";
+                break;
+            case "Potion":
+                itemDescription = other.tag + m_shieldDesc + "40 hp";
                 break;
             default:
                 itemDescription = "This is a mysterious item";

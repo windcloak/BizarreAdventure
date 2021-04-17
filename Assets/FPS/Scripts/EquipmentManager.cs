@@ -19,6 +19,7 @@ public class EquipmentManager : MonoBehaviour
     public OnEquipmentChanged onEquipmentChanged;
     Inventory inventory;
     public PlayerCharacterController player;
+    public InventorySlot potionSlot;
 
     float m_healAmount;
 
@@ -148,6 +149,7 @@ public class EquipmentManager : MonoBehaviour
         if (Inventory.potions == 0)
         {
             inventory.Remove(currentEquipment[2]);
+            potionSlot.ClearSlot();
         }
         Debug.Log("used potion");
 

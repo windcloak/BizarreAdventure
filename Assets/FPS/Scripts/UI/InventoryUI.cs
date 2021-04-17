@@ -36,11 +36,6 @@ public class InventoryUI : MonoBehaviour
         //        slots[i].ClearSlot();
         //    }
         //}
-        //UpdateArmorSlot(inventory.items[0]);
-        if (Inventory.potions == 0)
-        {
-            potionSlot.ClearSlot();
-        }
     }
 
 }

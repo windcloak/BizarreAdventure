@@ -39,6 +39,13 @@ public class GameFlowManager : MonoBehaviour
         SceneManager.LoadScene("desertScene");
         Debug.Log("going to desert");
     }
+
+    public void toPlains()
+    {
+        SceneManager.LoadScene("plainsScene");
+        Debug.Log("going to plains");
+    }
+
     public void toOcean()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);

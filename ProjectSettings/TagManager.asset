@@ -15,6 +15,7 @@ TagManager:
   - Super Shield
   - Mega Shield
   - Potion
+  - Boss
   layers:
   - Default
   - TransparentFX

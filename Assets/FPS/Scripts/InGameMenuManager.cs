@@ -19,6 +19,8 @@ public class InGameMenuManager : MonoBehaviour
     public Toggle framerateToggle;
     [Tooltip("GameObject for the controls")]
     public GameObject controlImage;
+    [Tooltip("GameObject for the loot image")]
+    public GameObject lootImage;
 
     PlayerInputHandler m_PlayerInputsHandler;
     Health m_PlayerHealth;
@@ -70,6 +72,11 @@ public class InGameMenuManager : MonoBehaviour
             if (controlImage.activeSelf)
             {
                 controlImage.SetActive(false);
+                return;
+            }
+            if (lootImage.activeSelf)
+            {
+                lootImage.SetActive(false);
                 return;
             }
 
@@ -138,5 +145,9 @@ public class InGameMenuManager : MonoBehaviour
     public void OnShowControlButtonClicked(bool show)
     {
         controlImage.SetActive(show);
+    }
+    public void OnShowLootButtonClicked(bool show)
+    {
+        lootImage.SetActive(show);
     }
 }

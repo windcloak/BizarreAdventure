@@ -23388,7 +23388,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f049dad4486bc4447850a56a12cb3aab, type: 3}
+      objectReference: {fileID: 8300000, guid: f5e578b4b4d36964d928c6d0913fdeab, type: 3}
     - target: {fileID: 4678688939268019454, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_AnchoredPosition.x

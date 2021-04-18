@@ -11,6 +11,7 @@ public class LoadSceneButton : MonoBehaviour
         if(EventSystem.current.currentSelectedGameObject == gameObject 
             && Input.GetButtonDown(GameConstants.k_ButtonNameSubmit))
         {
+            FindObjectOfType<AudioManager>().Play("Button");
             LoadTargetScene();
         }
     }

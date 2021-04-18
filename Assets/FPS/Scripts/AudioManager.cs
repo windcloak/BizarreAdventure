@@ -1,9 +1,13 @@
-﻿using UnityEngine;
-using UnityEngine.Audio;
+﻿using UnityEngine.Audio;
+using UnityEngine;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
     public AudioMixer[] audioMixers;
+
+    [Tooltip("Sounds used in game")]
+    public Sound[] sounds;
 
     public AudioMixerGroup[] FindMatchingGroups(string subPath)
     {
@@ -41,5 +45,18 @@ public class AudioManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void Play(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        // check if sound exists
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.Play();
     }
 }

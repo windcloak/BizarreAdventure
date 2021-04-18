@@ -5,8 +5,25 @@ using UnityEngine;
 public class OceanPortalTrigger : MonoBehaviour
 {
     public GameFlowManager gameManager;
+
+    public GameObject portalNotification;
     void OnTriggerEnter()
     {
-        gameManager.toOcean();
+        if (GameFlowManager.isDesertLevelComplete)
+        {
+            gameManager.toOcean();
+        } else
+        {
+            ShowPortalNotification();
+        }
+    }
+
+    void OnTriggerExit()
+    {
+        portalNotification.SetActive(false);
+    }
+    void ShowPortalNotification()
+    {
+        portalNotification.SetActive(true);
     }
 }

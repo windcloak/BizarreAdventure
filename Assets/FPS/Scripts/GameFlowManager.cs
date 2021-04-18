@@ -25,8 +25,10 @@ public class GameFlowManager : MonoBehaviour
     [Tooltip("This string has to be the name of the scene you want to load when losing")]
     public string loseSceneName = "LoseScene";
 
-
     public bool gameIsEnding { get; private set; }
+
+    // checks if Desert Level is complete so that Player can enter Ocean Level
+    public static bool isDesertLevelComplete = false;
 
     PlayerCharacterController m_Player;
     NotificationHUDManager m_NotificationHUDManager;
@@ -85,12 +87,16 @@ public class GameFlowManager : MonoBehaviour
         else
         {
             if (m_ObjectiveManager.AreAllObjectivesCompleted())
+            {
                 EndGame(true);
+                isDesertLevelComplete = true;
+            }
 
             // Test if player died
             if (m_Player.isDead)
                 EndGame(false);
         }
+
     }
 
     void EndGame(bool win)
@@ -128,4 +134,7 @@ public class GameFlowManager : MonoBehaviour
             m_TimeLoadEndGameScene = Time.time + endSceneLoadDelay;
         }
     }
+
+
+
 }

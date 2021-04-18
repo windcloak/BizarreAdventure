@@ -88,8 +88,9 @@ public class GameFlowManager : MonoBehaviour
         {
             if (m_ObjectiveManager.AreAllObjectivesCompleted())
             {
+                if (SceneManager.GetActiveScene().name == "desertScene")
+                    isDesertLevelComplete = true;
                 EndGame(true);
-                isDesertLevelComplete = true;
             }
 
             // Test if player died

@@ -39,7 +39,7 @@ public class PickupHUD : MonoBehaviour
                 itemDescription = other.tag + m_shieldDesc + "100 hp";
                 break;
             case "Potion":
-                itemDescription = other.tag + m_shieldDesc + "40 hp";
+                itemDescription = other.tag + m_potionDesc + "40 hp";
                 break;
             default:
                 itemDescription = "This is a mysterious item";

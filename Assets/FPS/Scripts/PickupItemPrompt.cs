@@ -9,8 +9,9 @@ public class PickupItemPrompt : MonoBehaviour
         pickup.OpenPickupPanel(other);
     }
 
-    public void OnTriggerExit()
+    public void OnTriggerExit(Collider other)
     {
         pickup.ClosePickupPanel();
     }
+
 }

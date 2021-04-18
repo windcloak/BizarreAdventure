@@ -26,6 +26,7 @@ public class ItemPickup : Interactable
         {
             PlayPickupFeedback();
             Destroy(gameObject);
+            FindObjectOfType<PickupHUD>().ClosePickupPanel();   // close the Pickup panel
             return;
         }
         Debug.Log("Inventory full!");

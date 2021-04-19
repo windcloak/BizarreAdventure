@@ -20,7 +20,12 @@ public class PickupHUD : MonoBehaviour
         "Good Shield",
         "Super Shield",
         "Mega Shield",
-        "Potion"
+        "Potion",
+        "Salmon Rifle",
+        "Blue Pistol",
+        "Cactus Gun",
+        "Ocean Shotgun",
+        "Sword Gun",
     };
     public void OpenPickupPanel(Collider other)
     {

@@ -69,24 +69,4 @@ public class ObjectiveHUDManger : MonoBehaviour
             }
         }
     }
-
-    void OnUpdateBossObjective(UnityActionUpdateObjective updateObjective)
-    {
-        if (m_ObjectivesDictionnary.TryGetValue(updateObjective.objective, out ObjectiveToast toast) && toast != null)
-        //&& !string.IsNullOrEmpty(descriptionText))
-        {
-            // set the new updated description for the objective, and forces the content size fitter to be recalculated
-            Canvas.ForceUpdateCanvases();
-            if (!string.IsNullOrEmpty(updateObjective.descriptionText))
-                toast.descriptionTextContent.text = updateObjective.descriptionText;
-
-            if (!string.IsNullOrEmpty(updateObjective.counterText))
-                toast.counterTextContent.text = updateObjective.counterText;
-
-            if (toast.GetComponent<RectTransform>())
-            {
-                UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(toast.GetComponent<RectTransform>());
-            }
-        }
-    }
 }

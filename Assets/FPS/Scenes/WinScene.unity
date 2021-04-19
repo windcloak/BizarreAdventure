@@ -1516,7 +1516,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level Complete!
+  m_text: you win!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c89460d2f91806a49b0729feaaa642c1, type: 2}
   m_sharedMaterial: {fileID: -7331517501180907825, guid: c89460d2f91806a49b0729feaaa642c1,

@@ -69,5 +69,4 @@ public class ObjectiveHUDManger : MonoBehaviour
             }
         }
     }
-
 }

@@ -16,6 +16,10 @@ TagManager:
   - Mega Shield
   - Potion
   - Boss
+  - Salmon Rifle
+  - Cactus Gun
+  - Blue Pistol
+  - Ocean Shotgun
   layers:
   - Default
   - TransparentFX

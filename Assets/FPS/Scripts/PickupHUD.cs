@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 public class PickupHUD : MonoBehaviour
 {
@@ -8,9 +9,25 @@ public class PickupHUD : MonoBehaviour
     string m_helmetDesc = " increases damage resistance by ";
     string m_shieldDesc = " increases max health by ";
     string m_potionDesc = " increases health by ";
+
+    // all the things that can be picked up
+    string[] m_pickups = {
+        "Basic Helmet",
+        "Good Helmet",
+        "Super Helmet",
+        "Mega Helmet",
+        "Basic Shield",
+        "Good Shield",
+        "Super Shield",
+        "Mega Shield",
+        "Potion"
+    };
     public void OpenPickupPanel(Collider other)
     {
-        PickupPanel.SetActive(true);
+        if (m_pickups.Contains(other.tag))
+            PickupPanel.SetActive(true);
+        else
+            return;
 
         switch (other.tag)
         {

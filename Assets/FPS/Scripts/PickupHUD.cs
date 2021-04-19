@@ -9,6 +9,7 @@ public class PickupHUD : MonoBehaviour
     string m_helmetDesc = " increases damage resistance by ";
     string m_shieldDesc = " increases max health by ";
     string m_potionDesc = " increases health by ";
+    string m_gunDesc = "This is a ";
 
     // all the things that can be picked up
     string[] m_pickups = {

@@ -79,8 +79,8 @@ MonoBehaviour:
   verticalBobFrequency: 1
   bobbingAmount: 0.3
   rotatingSpeed: 360
-  pickupSFX: {fileID: 8300000, guid: 9c793d7183ca03e4fbf328175291cee4, type: 3}
-  pickupVFXPrefab: {fileID: 0}
+  pickupSFX: {fileID: 8300000, guid: 1f52c0b197bacdb40baad6d71e3a44c4, type: 3}
+  pickupVFXPrefab: {fileID: 100012, guid: 4e354172ca9de2e45b3021f36963f995, type: 3}
 --- !u!114 &3637301713060460815
 MonoBehaviour:
   m_ObjectHideFlags: 0

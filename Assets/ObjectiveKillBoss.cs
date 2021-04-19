@@ -32,7 +32,7 @@ public class ObjectiveKillBoss : MonoBehaviour
 
         if (enemy.CompareTag("Boss"))
         {
-            m_Objective.CompleteBossObjective(string.Empty, "Objective complete : " + m_Objective.title);
+            m_Objective.CompleteObjective(string.Empty, remaining.ToString(), "Objective complete : " + m_Objective.title);
         }
 
     }

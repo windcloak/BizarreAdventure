@@ -64,6 +64,21 @@ public class PickupHUD : MonoBehaviour
             case "Potion":
                 itemDescription = other.tag + m_potionDesc + "40 hp";
                 break;
+            case "Salmon Rifle":
+                itemDescription = m_gunDesc + other.tag;
+                break;
+            case "Blue Pistol":
+                itemDescription = m_gunDesc + other.tag;
+                break;
+            case "Cactus Gun":
+                itemDescription = m_gunDesc + other.tag;
+                break;
+            case "Ocean Shotgun":
+                itemDescription = m_gunDesc + other.tag;
+                break;
+            case "Sword Gun":
+                itemDescription = m_gunDesc + other.tag;
+                break;
             default:
                 itemDescription = "This is a mysterious item";
                 break;

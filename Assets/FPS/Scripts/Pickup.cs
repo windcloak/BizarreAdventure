@@ -55,6 +55,7 @@ public class Pickup : MonoBehaviour
         if (_canBePickedUp && Input.GetButtonDown(GameConstants.k_ButtonNameInteract))
         {
             onPick.Invoke(_pickingPlayer);
+            FindObjectOfType<PickupHUD>().ClosePickupPanel();
         }
     }
 

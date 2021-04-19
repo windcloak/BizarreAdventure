@@ -17,8 +17,6 @@ public class Objective : MonoBehaviour
 
     public UnityAction<UnityActionUpdateObjective> onUpdateObjective;
 
-    public UnityAction<UnityActionUpdateBossObjective> onUpdateBossObjective;
-
     NotificationHUDManager m_NotificationHUDManager;
     ObjectiveHUDManger m_ObjectiveHUDManger;
 
@@ -55,20 +53,6 @@ public class Objective : MonoBehaviour
         m_NotificationHUDManager.UnregisterObjective(this);
     }
 
-    public void UpdateBossObjective(string descriptionText, string notificationText)
-    {
-        onUpdateBossObjective.Invoke(new UnityActionUpdateBossObjective(this, descriptionText, false, notificationText));
-    }
-
-    public void CompleteBossObjective(string descriptionText, string notificationText)
-    {
-        isCompleted = true;
-        onUpdateBossObjective.Invoke(new UnityActionUpdateBossObjective(this, descriptionText, true, notificationText));
-
-        // unregister this objective form both HUD managers
-        m_ObjectiveHUDManger.UnregisterObjective(this);
-        m_NotificationHUDManager.UnregisterObjective(this);
-    }
 }
 
 public class UnityActionUpdateObjective
@@ -84,22 +68,6 @@ public class UnityActionUpdateObjective
         this.objective = objective;
         this.descriptionText = descriptionText;
         this.counterText = counterText;
-        this.isComplete = isComplete;
-        this.notificationText = notificationText;
-    }
-}
-
-public class UnityActionUpdateBossObjective
-{
-    public Objective objective;
-    public string descriptionText;
-    public bool isComplete;
-    public string notificationText;
-
-    public UnityActionUpdateBossObjective(Objective objective, string descriptionText, bool isComplete, string notificationText)
-    {
-        this.objective = objective;
-        this.descriptionText = descriptionText;
         this.isComplete = isComplete;
         this.notificationText = notificationText;
     }

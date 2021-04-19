@@ -50,7 +50,7 @@ public class GameFlowManager : MonoBehaviour
 
     public void toOcean()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("oceanScene");
         Debug.Log("going to ocean");
     }
     public void toHub()

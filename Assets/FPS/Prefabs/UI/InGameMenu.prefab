@@ -3864,6 +3864,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8824232396959351909}
     m_Modifications:
+    - target: {fileID: 8009679357232395964, guid: c97932d9d257dc842bd59e241d4d02c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8824232397177945069}
+    - target: {fileID: 8009679357232395964, guid: c97932d9d257dc842bd59e241d4d02c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 8009679358238899385, guid: c97932d9d257dc842bd59e241d4d02c7,
         type: 3}
       propertyPath: m_Name

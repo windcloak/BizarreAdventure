@@ -11930,7 +11930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031513427}
-  portalNotification: {fileID: 0}
+  portalNotification: {fileID: 1714334634}
 --- !u!65 &989456197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17406,20 +17406,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1768219696}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1590492198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590492196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee6a0ed421de854f849f421b2e1f166, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 1031513427}
-  portalNotification: {fileID: 1714334634}
 --- !u!65 &1590492199
 BoxCollider:
   m_ObjectHideFlags: 0

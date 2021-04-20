@@ -12,7 +12,8 @@ public class OceanPortalTrigger : MonoBehaviour
         if (GameFlowManager.isDesertLevelComplete)
         {
             gameManager.toOcean();
-        } else
+        }
+        else
         {
             ShowPortalNotification();
         }

@@ -17644,7 +17644,7 @@ MonoBehaviour:
   weaponAnimator: {fileID: 0}
   muzzleFlashPrefab: {fileID: 1105080272}
   unparentMuzzleFlash: 0
-  shootSFX: {fileID: 8300000, guid: 0d44f0cb2e91f5f4ca09aded9a1bd9ab, type: 3}
+  shootSFX: {fileID: 8300000, guid: b556bb18baed11943abb774cbf3f271f, type: 3}
   changeWeaponSFX: {fileID: 0}
   useContinuousShootSound: 0
   continuousShootStartSFX: {fileID: 0}
@@ -18258,7 +18258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionSourcePoint: {fileID: 6571005840991637222}
   detectionRange: 30
-  attackRange: 35
+  attackRange: 30
   knownTargetTimeout: 4
   animator: {fileID: 0}
 --- !u!4 &2778167488509580814 stripped
@@ -19378,7 +19378,7 @@ MonoBehaviour:
   onDetectVFX:
   - {fileID: 1107237027}
   - {fileID: 653287431}
-  onDetectSFX: {fileID: 8300000, guid: 7fac2ef5c59df1a45985d3eb894e8d47, type: 3}
+  onDetectSFX: {fileID: 0}
 --- !u!1001 &4279969440527632311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21430,7 +21430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 500
   criticalHealthRatio: 0.3
 --- !u!1001 &6397267552937762774
 PrefabInstance:
@@ -23079,6 +23079,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7886326314646222845}
     m_Modifications:
+    - target: {fileID: 1724943582601498801, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
       propertyPath: m_Name

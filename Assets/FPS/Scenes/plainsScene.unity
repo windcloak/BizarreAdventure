@@ -1815,7 +1815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1589180272}
-  potionSlot: {fileID: 0}
+  potionSlot: {fileID: 1202623967}
 --- !u!1 &666873436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 27696065234217671, guid: 10639e68802b47d4d9ea80973c7d6056,
@@ -2959,6 +2959,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1191282959}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1202623967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1424276608832465468, guid: c996b53e9f849234393d1e90f68d1679,
+    type: 3}
+  m_PrefabInstance: {fileID: 646018184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d46932a1de3c64db94ed6efc5262f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1202689508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8e6a38f8dd39b4b4ab3fe23e61fb096c,

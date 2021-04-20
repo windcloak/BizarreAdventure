@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 5148601922791154606}
   - component: {fileID: 5148601922791154607}
   m_Layer: 0
-  m_Name: potion
+  m_Name: Pickup_Potion
   m_TagString: Potion
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5454681559348451675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.744904, y: 0.69, z: -0.25949454}
+  m_LocalPosition: {x: -17.744904, y: 1, z: -0.25949454}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 736172629121187508}

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/desertScene.unity
     guid: d6b83f84b25687d46ba3183f0391046a
+  - enabled: 1
+    path: Assets/FPS/Scenes/oceanScene.unity
+    guid: 680cdd148bc9cc94c95fbc77bd749076
   - enabled: 0
     path: Assets/FPS/Scenes/MainScene.unity
     guid: 011a6612e7f3c2a46818e7148f63baae

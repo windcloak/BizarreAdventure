@@ -150,4 +150,9 @@ public class InGameMenuManager : MonoBehaviour
     {
         lootImage.SetActive(show);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

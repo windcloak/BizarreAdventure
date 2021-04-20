@@ -2770,6 +2770,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 678665255}
     m_Modifications:
+    - target: {fileID: 9126330747265352464, guid: 11c6d23a4da90184f98c4c384812a86e,
+        type: 3}
+      propertyPath: shootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 339fc7bff17278840978d25b2e7e6b8b, type: 3}
+    - target: {fileID: 9126330747265352465, guid: 11c6d23a4da90184f98c4c384812a86e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9126330748665769888, guid: 11c6d23a4da90184f98c4c384812a86e,
         type: 3}
       propertyPath: dropRate
@@ -2781,6 +2791,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5454681559348451675, guid: 4bda41750ab8bd84faf039ed30c927bd,
         type: 3}
+    - target: {fileID: 9126330748665769889, guid: 11c6d23a4da90184f98c4c384812a86e,
+        type: 3}
+      propertyPath: onDetectSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 97dceb77af5875141947a8201d3911f6, type: 3}
     - target: {fileID: 9126330748665769896, guid: 11c6d23a4da90184f98c4c384812a86e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3616,6 +3631,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 678665255}
     m_Modifications:
+    - target: {fileID: 9126330747265352464, guid: 11c6d23a4da90184f98c4c384812a86e,
+        type: 3}
+      propertyPath: shootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 339fc7bff17278840978d25b2e7e6b8b, type: 3}
+    - target: {fileID: 9126330748665769889, guid: 11c6d23a4da90184f98c4c384812a86e,
+        type: 3}
+      propertyPath: onDetectSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 97dceb77af5875141947a8201d3911f6, type: 3}
     - target: {fileID: 9126330748665769896, guid: 11c6d23a4da90184f98c4c384812a86e,
         type: 3}
       propertyPath: m_RootOrder

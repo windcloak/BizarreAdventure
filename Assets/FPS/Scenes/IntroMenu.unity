@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 221992917}
+      - m_Target: {fileID: 672619302}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -2144,6 +2144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672619300}
   - component: {fileID: 672619301}
+  - component: {fileID: 672619302}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2181,6 +2182,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9119147028136f34795faa82b1dac046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &672619302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672619299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5af1bc94b6722b4eb89d070a0809dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &709300479
